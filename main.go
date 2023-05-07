@@ -16,7 +16,13 @@ func main() {
 		fmt.Println("failed to launch wisper instance! ERROR: ", err)
 		os.Exit(1)
 	}
-	defer reader.Close()
+
+	defer func(reader *readline.Instance) {
+		err := reader.Close()
+		if err != nil {
+
+		}
+	}(reader)
 
 	for {
 		fmt.Print(user)
