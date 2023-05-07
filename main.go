@@ -1,25 +1,31 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
+	"github.com/chzyer/readline"
 	"os"
-	"strings"
 	"wisper/cmd"
 )
 
 func main() {
-	reader := bufio.NewReader(os.Stdin)
 	user := "meanii > "
-
 	commands := cmd.Commands{}
+
+	reader, err := readline.New(user)
+	if err != nil {
+		fmt.Println("failed to launch wisper instance! ERROR: ", err)
+		os.Exit(1)
+	}
+	defer reader.Close()
 
 	for {
 		fmt.Print(user)
-		userInput, _ := reader.ReadString('\n')
+		userInput, err := reader.Readline()
 
-		// Remove newline character from input
-		userInput = strings.TrimSuffix(userInput, "\n")
+		if err != nil {
+			fmt.Println("failed to read the line! ERROR: ", err)
+			continue
+		}
 
 		switch userInput {
 		case "exit":

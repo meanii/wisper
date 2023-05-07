@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de2211dc-e502-4e8a-a9b6-64ac0c70a990" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/readPassword.go" afterDir="false" />
+    <list default="true" id="de2211dc-e502-4e8a-a9b6-64ac0c70a990" name="Changes" comment="password is not hide while typing and treat as a password">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +63,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="password is not hide while typing and treat as a password" />
+    <option name="LAST_COMMIT_MESSAGE" value="password is not hide while typing and treat as a password" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
