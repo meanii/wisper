@@ -6,6 +6,6 @@ import (
 )
 
 func (cmd Commands) Exit() {
-	fmt.Println("leaving...")
+	fmt.Println("adios!")
 	os.Exit(0)
 }
