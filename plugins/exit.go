@@ -1,11 +1,11 @@
-package cmd
+package plugins
 
 import (
 	"fmt"
 	"os"
 )
 
-func (cmd Commands) Exit() {
+func (p *Plugins) Exit() {
 	fmt.Println("adios!")
 	os.Exit(0)
 }

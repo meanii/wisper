@@ -3,29 +3,29 @@ package main
 import (
 	"fmt"
 	"log"
-	"wisper/cmd"
+	"wisper/plugins"
 
 	"github.com/chzyer/readline"
 )
 
 func main() {
-	SHELL_NAME := "wisper > "
-	commands := cmd.Commands{}
+	ShellName := "wisper > "
+	commands := plugins.Plugins{}
 
-	reader, err := readline.New(SHELL_NAME)
+	reader, err := readline.New(ShellName)
 	if err != nil {
-		log.Fatalln("failed to launch wisper instance! ERROR: ", err)
+		log.Fatalf("failed to launch %s instance! ERROR: %s", ShellName, err)
 	}
 
 	defer func(reader *readline.Instance) {
 		err := reader.Close()
 		if err != nil {
-			log.Fatalln("failed to close the wisper instance! ERROR: ", err)
+			log.Fatalf("failed to close the %s instance! ERROR: %s", ShellName, err)
 		}
 	}(reader)
 
 	for {
-		fmt.Print(SHELL_NAME)
+		fmt.Print(ShellName)
 		userInput, err := reader.Readline()
 
 		if err != nil {
@@ -33,13 +33,15 @@ func main() {
 			continue
 		}
 
-		switch userInput {
-		case "exit":
-			commands.Exit()
-		case "auth":
-			commands.Auth()
-		case "help":
-			commands.Help()
+		// handling all commands, including exit
+		collections := commands.Plugins()
+		for _, plugin := range collections {
+			if plugin.Name == userInput {
+				if fn, ok := plugin.Method.(func()); ok {
+					fn()
+				}
+			}
 		}
+
 	}
 }

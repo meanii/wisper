@@ -1,8 +1,8 @@
-package cmd
+package plugins
 
 import "fmt"
 
-func (cmd Commands) Help() {
+func (p *Plugins) Help() {
 	const HelpMessage = `Wisper is an end-to-end encrypted CLI-based chatting application.
 
 Usage:
@@ -10,7 +10,7 @@ Usage:
   about - display information about the application
   auth - log in or sign up
 
-Commands:
+Plugins:
   help   Display a list of available commands and their descriptions
   about  Display general information about the Wisper application
   auth   Log in or sign up for a Wisper account

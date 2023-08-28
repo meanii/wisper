@@ -1,4 +1,4 @@
-package cmd
+package plugins
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"wisper/utils"
 )
 
-func (cmd *Commands) Auth() {
+func (p *Plugins) Auth() {
 	var username string
 	var password string
 
