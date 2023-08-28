@@ -2,25 +2,35 @@ package plugins
 
 import "fmt"
 
+// Help displays a list of available commands and their descriptions
+func generateHelpMessage(collections []CollectionInfo) string {
+	var helpMessage string
+	for _, collection := range collections {
+		helpMessage += fmt.Sprintf("  %s - %s\n", collection.Name, collection.Description)
+	}
+	return helpMessage
+}
+
+// Help displays a list of available commands and their descriptions
 func (p *Plugins) Help() {
+
+	collectionInfos := p.PluginsInfo()
+
 	const HelpMessage = `Wisper is an end-to-end encrypted CLI-based chatting application.
 
 Usage:
-  help - display this message
-  about - display information about the application
-  auth - log in or sign up
+%s
 
-Plugins:
-  help   Display a list of available commands and their descriptions
-  about  Display general information about the Wisper application
-  auth   Log in or sign up for a Wisper account
+This program is written by <https://github.com/meanii> - Anil Chauhan
+For more information, please refer to the Wisper documentation at https://wisper.meanii.dev/docs
+`
 
-Usage examples:
-  $ wisper help
-  $ wisper about
-  $ wisper auth
+	fmt.Printf(HelpMessage, generateHelpMessage(collectionInfos))
+}
 
-For more information, please refer to the Wisper documentation at https://wisper.meanii.online/docs`
-
-	fmt.Println(HelpMessage)
+func (p *Plugins) HelpInfo() CollectionInfo {
+	return CollectionInfo{
+		Name:        "help",
+		Description: "Display a list of available commands and their descriptions",
+	}
 }

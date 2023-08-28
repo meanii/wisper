@@ -34,9 +34,11 @@ func main() {
 		}
 
 		// handling all commands, including exit
+		// invoke the method if the command is found
 		collections := commands.Plugins()
 		for _, plugin := range collections {
 			if plugin.Name == userInput {
+				// type assertion to check if the method is a function
 				if fn, ok := plugin.Method.(func()); ok {
 					fn()
 				}

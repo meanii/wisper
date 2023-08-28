@@ -24,3 +24,10 @@ func (p *Plugins) Auth() {
 
 	fmt.Printf("Username: %s\nPassword: %s\n", username, password)
 }
+
+func (p *Plugins) AuthInfo() CollectionInfo {
+	return CollectionInfo{
+		Name:        "auth",
+		Description: "Log in or sign up for a Wisper account",
+	}
+}

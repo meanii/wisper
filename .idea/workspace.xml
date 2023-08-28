@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de2211dc-e502-4e8a-a9b6-64ac0c70a990" name="Changes" comment="added some bash like feature like history and reverse search">
-      <change beforePath="$PROJECT_DIR$/.idea/wisper.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wisper.iml" afterDir="false" />
+    <list default="true" id="de2211dc-e502-4e8a-a9b6-64ac0c70a990" name="Changes" comment="impliemented plugins mechanism, auto imports all plugins">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/exit.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/exit.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/help.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/help.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/exit.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/exit.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/help.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/help.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +34,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2PRt41M0m00TOVqVY0xf55Re7Ww" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -57,6 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
@@ -75,7 +73,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="password is not hide while typing and treat as a password" />
     <MESSAGE value="added some bash like feature like history and reverse search" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some bash like feature like history and reverse search" />
+    <MESSAGE value="impliemented plugins mechanism, auto imports all plugins" />
+    <option name="LAST_COMMIT_MESSAGE" value="impliemented plugins mechanism, auto imports all plugins" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

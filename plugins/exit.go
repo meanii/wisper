@@ -9,3 +9,10 @@ func (p *Plugins) Exit() {
 	fmt.Println("adios!")
 	os.Exit(0)
 }
+
+func (p *Plugins) ExitInfo() CollectionInfo {
+	return CollectionInfo{
+		Name:        "exit",
+		Description: "Exit the application",
+	}
+}
