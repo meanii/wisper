@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de2211dc-e502-4e8a-a9b6-64ac0c70a990" name="Changes" comment="impliemented plugins mechanism, auto imports all plugins">
+    <list default="true" id="de2211dc-e502-4e8a-a9b6-64ac0c70a990" name="Changes" comment="added Name And Description for plugins">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/exit.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/exit.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/help.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/help.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +59,8 @@
     "go.sdk.automatically.set": "true",
     "last_opened_file_path": "/Users/anil/Documents/anil/projects/go/src/github.com/meanii/wisper",
     "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)"
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -74,7 +72,8 @@
     <MESSAGE value="password is not hide while typing and treat as a password" />
     <MESSAGE value="added some bash like feature like history and reverse search" />
     <MESSAGE value="impliemented plugins mechanism, auto imports all plugins" />
-    <option name="LAST_COMMIT_MESSAGE" value="impliemented plugins mechanism, auto imports all plugins" />
+    <MESSAGE value="added Name And Description for plugins" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Name And Description for plugins" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

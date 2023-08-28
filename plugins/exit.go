@@ -6,7 +6,7 @@ import (
 )
 
 func (p *Plugins) Exit() {
-	fmt.Println("adios!")
+	fmt.Println("\n\nadios!")
 	os.Exit(0)
 }
 
