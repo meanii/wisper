@@ -3,13 +3,17 @@ package main
 import (
 	"fmt"
 	"log"
-	"wisper/plugins"
 
 	"github.com/chzyer/readline"
+
+	"wisper/configs"
+	"wisper/plugins"
 )
 
 func main() {
-	ShellName := "wisper > "
+	configs.Init()
+
+	ShellName := fmt.Sprintf("%s > ", configs.Config.Name)
 	commands := plugins.Plugins{}
 
 	reader, err := readline.New(ShellName)
@@ -27,7 +31,6 @@ func main() {
 	for {
 		fmt.Print(ShellName)
 		userInput, err := reader.Readline()
-
 		if err != nil {
 			fmt.Println("failed to read the line! ERROR: ", err)
 			continue

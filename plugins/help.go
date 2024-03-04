@@ -1,6 +1,8 @@
 package plugins
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // Help displays a list of available commands and their descriptions
 func generateHelpMessage(collections []CollectionInfo) string {
@@ -13,7 +15,6 @@ func generateHelpMessage(collections []CollectionInfo) string {
 
 // Help displays a list of available commands and their descriptions
 func (p *Plugins) Help() {
-
 	collectionInfos := p.PluginsInfo()
 
 	const HelpMessage = `Wisper is an end-to-end encrypted CLI-based chatting application.
