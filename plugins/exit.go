@@ -12,7 +12,8 @@ func (p *Plugins) Exit() {
 
 func (p *Plugins) ExitInfo() CollectionInfo {
 	return CollectionInfo{
-		Name:        "exit",
-		Description: "Exit the application",
+		Name:          "exit",
+		Description:   "Exit the application",
+		PositionIndex: 99,
 	}
 }

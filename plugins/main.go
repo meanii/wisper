@@ -19,8 +19,9 @@ type Collection struct {
 // this is used to display the list of available commands and their descriptions
 // in the help command
 type CollectionInfo struct {
-	Name        string
-	Description string
+	Name          string
+	Description   string
+	PositionIndex int
 }
 
 // Plugins returns a slice of Collection

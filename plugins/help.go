@@ -13,9 +13,22 @@ func generateHelpMessage(collections []CollectionInfo) string {
 	return helpMessage
 }
 
+func HandlerPositionIndex(collections []CollectionInfo) []CollectionInfo {
+	var sortedCollections []CollectionInfo
+	for _, collection := range collections {
+		if collection.PositionIndex != 0 {
+			sortedCollections = append(sortedCollections, collection)
+		} else {
+			sortedCollections = append([]CollectionInfo{collection}, sortedCollections...)
+		}
+	}
+	return sortedCollections
+}
+
 // Help displays a list of available commands and their descriptions
 func (p *Plugins) Help() {
 	collectionInfos := p.PluginsInfo()
+	collectionInfos = HandlerPositionIndex(collectionInfos)
 
 	const HelpMessage = `Wisper is an end-to-end encrypted CLI-based chatting application.
 
@@ -31,7 +44,8 @@ For more information, please refer to the Wisper documentation at https://wisper
 
 func (p *Plugins) HelpInfo() CollectionInfo {
 	return CollectionInfo{
-		Name:        "help",
-		Description: "Display a list of available commands and their descriptions",
+		Name:          "help",
+		Description:   "Display a list of available commands and their descriptions",
+		PositionIndex: 100,
 	}
 }
