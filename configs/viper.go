@@ -52,7 +52,8 @@ func LoadConfig() (c *config) {
 		log.Fatalf("Error reading config file, %s", err)
 	}
 
-	err = viper.Unmarshal(&c)
+	viper.WriteConfigAs(filepath.Join(wisperConfigPath, wisperConfigName))
 
+	_ = viper.Unmarshal(&c)
 	return
 }
