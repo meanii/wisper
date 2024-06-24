@@ -32,7 +32,7 @@ func main() {
 		fmt.Print(ShellName)
 		userInput, err := reader.Readline()
 		if err != nil {
-			fmt.Println("failed to read the line! ERROR: ", err)
+			fmt.Printf("want to exit? type 'exit' to exit\n")
 			continue
 		}
 
